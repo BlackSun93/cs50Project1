@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+<head>
+        
+<style> 
+
+    </style>
+{% block heading %}
+        <title>A website</title>
+{% endblock %}
+
+    </head>
+
+    {% block body %}
+
+    <body>
+        <h1>Hello world</h1>
+        <h1> {{ headline }}</h1>                                                           
+
+        <p>Lnading page for the website, should brief the user on what this is and provide a login option
+        </p>
+       
+        <p>
+            Needs to display login option or a link to sign up, signup link should create users table if it doesnt already exist
+        and allow username/ password input
+        </p>
+        <p>
+            otherwise trying to login should query user table
+        </p>
+
+        <p>
+            Please enter your username and password, if you dont have sone please <a href="signup">sign up here</a>
+        </p>
+
+        <form action="{{ url_for('loginsuccess') }}" method="post">
+            <div class="form-group">
+                <select class="form-control" name="usernamelog">
+                    <input class="form-control" name="usernamelog" placeholder="Enter your username">
+                </select>
+            </div>
+    
+            <div>
+                <select class="form-control" name="passwordlog">
+                    <input class="form-control" name="passwordlog" placeholder="Enter your password">
+                </select>
+            </div>
+    
+            <button>Submit</button>
+           
+        </form>
+          
+        
+    </body>
+
+    {% endblock %}
+</html>

@@ -1,0 +1,65 @@
+
+@media (min-width:600px) {
+    body {
+        font-size: 16;
+    }
+}
+@media (max-width:599px) {
+    body {
+        font-size: 12;
+    }
+    img {
+        width: 20%;
+    }
+}
+
+
+body 
+{
+
+    background-color: rgb(254, 255, 190);
+    color: rgb(50, 23, 173);
+    margin-left: 10px;
+    width: 95%;
+    
+}
+h1 {
+    text-align: center;
+    color: #512920 ;
+}
+h3 {
+    text-align: center;
+}
+
+  
+    #tankTable {
+        width:70%; 
+        margin-left:15%; 
+        margin-right:15%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+      }
+    th , td
+    {
+        border: 1px solid black;
+        padding: 5px;
+        color: black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+ 
+    #navigation {
+        text-align: center;
+      top: 0px;
+        margin-bottom: 30px;
+        padding: 20px;
+        line-height: 0px;
+        margin:0px;
+        
+    }
+
+    div.firstDiv 
+    {
+        margin-top: 50px;
+    }
