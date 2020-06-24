@@ -4,26 +4,17 @@
     Signup Page
 {% endblock %}
 
+<title>signup page </title> 
 {% block body %}
+{{ headline }}
     <p>
-        Some text that I wrote
+        Please complete the below form to register as a user of WebBook.
     </p>
-
+<div id="signupboxes">
     <form action="{{ url_for('signupcomplete') }}" method="post">
-        <div class="form-group">
-            <select class="form-control" name="username">
                 <input class="form-control" name="username" placeholder="Enter a username">
-            </select>
-        </div>
-
-        <div>
-            <select class="form-control" name="password">
                 <input class="form-control" name="password" placeholder="Enter a password">
-            </select>
-        </div>
-
         <button>Submit</button>
-       
     </form>
-
+</div>
     {% endblock %}

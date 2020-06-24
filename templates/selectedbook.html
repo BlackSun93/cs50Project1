@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+<title>Book Search</title>
+{% block body %}
+
+    <div class="row">
+      <div class="col-sm">
+            {% for books in books  %} 
+            <i>Showing information and reviews for... </i>
+            <div id="bookinfo">
+            <h1>{{books.title}}</h1>
+            <p>Written by <b>{{books.author}}</b></p>
+            <p>Written in <b>{{books.year}}</b> </p>
+            <p>ISBN <b>{{books.isbn}}</b></p>
+            <p>Data from GoodReads: </p> 
+            <p>{{rev_count}} reviews </p>
+            <p> average rating {{average_score}} </p> 
+            <a href="{{ url_for('search') }}">search for another book</a>
+        </div>
+            
+      </div>
+      <div class="col-sm">
+        
+          <h2>Write a Review</h2>
+            <div id="reviewbox">
+                <form action="/selectedbook/{{books.isbn}}" method="POST">         
+                    <textarea name="review" rows="4" cols="40"
+                        placeholder="Write your review..."></textarea> 
+                <div class="rating">  
+                     <label><input id="rating-1" name="rating" type="radio" value="1"/>1 Star</label>  
+                    <label><input id="rating-2" name="rating" type="radio" value="2"/>2 Stars</label> 
+                    <label><input id="rating-3" name="rating" type="radio" value="3"/>3 Stars</label> 
+                    <label><input id="rating-4" name="rating" type="radio" value="4"/>4 Stars</label>
+                    <label><input id="rating-5" name="rating" type="radio" value="5"/>5 Stars</label> 
+                </div>
+                <button>Submit</button>
+                </form>
+            </div>
+            <i>Please note only 1 review is allowed per user, per book, you can update your review by resubmitting one.</i>
+        </div>
+                
+
+      
+      <div class="col-sm">
+          <h2>What Other People thought...</h2>
+                {% endfor %}
+                {% for review in reviews%}
+                <p><b>{{review.username}}</b> says "{{review.review}}"  <b>{{review.rating}} / 5</b> </p>
+ 
+                {% endfor %}
+
+                {% endblock %}
+      </div>
+    </div>
+
+
+
+
+
