@@ -1,8 +1,7 @@
-# Project 1
+# cs50w-2020-project-1---wikipedia-style-website
 
-Web Programming with Python and JavaScript
+this is my project 1 submission for the 2020 course.
+It is a wikipedia style website where users can find, create and edit articles on whatever subject they like.
+It has a random article feature too.
 
-This repo contains the files required for a website that allows a user to search for books and leave reviews.
-import.py allows books.csv to be uploaded as a sql database hosted by heroku.
-application.py contains flask app.routes for a locally hosted website where users can register, login, search for books, leave reviews and when querying the /api/<some-isbn> route, will query the goodreads API and return a json with goodreads data.
- 
+Thanks for reading
